@@ -155,7 +155,7 @@ async function getAssistantResponse(userMessage) {
       ...allMsgs.map((m) => ({ role: m.role, content: m.content })),
       { role: "user", content: userMessage },
     ];
-    payload = { messages: messagesForAPI };
+    payload = { message: messagesForAPI };
     url = `${BASE_URL}/chat`;
   }
 
