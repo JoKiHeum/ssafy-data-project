@@ -34,8 +34,16 @@
     3. 글로벌 서비스 경험 및 외국어 능력
 
   ## 3. 배포링크
-  ???
+    1) Backend: https://ssafy-2024-backend-falling-paper-8688.fly.dev/
 
-  ## 4. 로컬실행 방법
-  
+    2) Frontend: https://ssafy-24winter-frontend-9ggm.vercel.app/
+
+## 4. 로컬실행 방법
+1) Backend
+  - embed.py : pdf 파일 벡터화, 임베딩, db에 저장(pinecone, lanchain 활용)
+  - app.py : RAG(vector db) 사용해 chatgpt가 응답하는 Fastapi 프레임워크 백앤드 코드
+ 
+2) Frontend
+ - frontend 코드가 올라가 있는 github repository vercel에 연동해 배포
+
 
