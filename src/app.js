@@ -1,5 +1,6 @@
 import "regenerator-runtime/runtime"; // if needed for async/await in older browsers
 
+
 const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
@@ -149,13 +150,7 @@ async function getAssistantResponse(userMessage) {
     url = `${BASE_URL}/assistant`;
   } else {
     // Naive mode
-    const allMsgs = await getAllMessages();
-    const messagesForAPI = [
-      { role: "system", content: "You are a helpful assistant." },
-      ...allMsgs.map((m) => ({ role: m.role, content: m.content })),
-      { role: "user", content: userMessage },
-    ];
-    payload = { message: messagesForAPI };
+    payload = { message: userMessage };
     url = `${BASE_URL}/chat`;
   }
 
